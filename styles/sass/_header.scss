@@ -1,7 +1,110 @@
-.test {
-    p {
-        span {
-            color: orange;
+header {
+    display: flex;
+    position: relative;
+    height: 70px;
+    background-image: radial-gradient(at bottom center, $light 55%, $blue 360%);
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 0px 6px $dark;
+
+    #heading_logo {
+        font-family: $font-logo;
+        color: $dark;
+        font-size: 32px;
+        margin: 0;
+        align-self: center;
+    }
+
+    nav {
+        align-self: center;
+    }
+
+    #nav_bars-burger {
+        width: 50px;
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    #burger-top,
+    #burger-middle,
+    #burger-bottom {
+        position: absolute;
+        width: 42px;
+        height: 4px;
+        background-color: $dark;
+        border-radius: 4px;
+        left: 4px;
+    }
+    
+    #burger-top,
+    #burger-bottom {
+        transition: all .3s ease;
+    }
+    
+    #burger-middle {
+        top: 15px;
+        transition: opacity .3s ease;
+    }
+    
+    #burger-top {
+        top: 4px;
+    }
+    
+    #burger-bottom {
+        top: 26px;
+    }
+
+    #nav_content {
+        position: absolute;
+        width: 100vw;
+        height: 200px;
+        left: 0;
+        right: 0;
+        background-image: radial-gradient(at top center, $light 55%, $blue 360%);
+        border-bottom: solid 3px $blue;
+        box-shadow: 0 3px 0 $green;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        top: -134px;
+        z-index: -1;
+        transition: top .34s ease-in-out;
+    }
+
+    .nav_content-a {
+        align-self: center;
+        width: 100%;
+        display: flex;
+        
+        a {
+            align-self: center;
+            color: $dark;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            display: block;
+            padding: 17px;
+            box-sizing: border-box;
+
+            &:hover {
+                text-decoration: underline;
+                color: $green;
+            }
         }
+    }
+
+    #nav-hide {
+        position: absolute;
+        width: 100vw;
+        height: calc(100vh - 275px);
+        top: 275px;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        display: none;
     }
 }
