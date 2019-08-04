@@ -10,20 +10,24 @@ let navClicked = false;
 
 function navTransform() {
 	if (!navClicked) {
-    	burgerMid.style.opacity = '0';
-    	burgerTop.style.top = '15px';
-        burgerTop.style.transform = 'rotate(45deg)';
-        burgerBot.style.top = '15px';
-        burgerBot.style.transform = 'rotate(-45deg)';
-        navContent.style.top = "70px";
+    	burgerMid.classList.remove("burger-middle");
+    	burgerTop.classList.remove("burger-top");
+        burgerBot.classList.remove("burger-bottom");
+        navContent.classList.remove("nav_content-hide");
+        burgerMid.classList.add("burger-middle-x");
+    	burgerTop.classList.add("burger-top-x");
+        burgerBot.classList.add("burger-bottom-x");
+        navContent.classList.add("nav_content-show");
         navHide.style.display = "block";
     } else {
-        burgerMid.style.opacity = '1';
-        burgerTop.style.top = '4px';
-        burgerTop.style.transform = 'none';
-        burgerBot.style.top = '26px';
-        burgerBot.style.transform = 'none';
-        navContent.style.top = "-134px";
+    	burgerMid.classList.remove("burger-middle-x");
+    	burgerTop.classList.remove("burger-top-x");
+        burgerBot.classList.remove("burger-bottom-x");
+        navContent.classList.remove("nav_content-show");
+        burgerMid.classList.add("burger-middle");
+    	burgerTop.classList.add("burger-top");
+        burgerBot.classList.add("burger-bottom");
+        navContent.classList.add("nav_content-hide");
         navHide.style.display = "none";
     }
 	navClicked = !navClicked;
