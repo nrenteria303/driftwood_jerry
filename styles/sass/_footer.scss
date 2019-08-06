@@ -1,0 +1,118 @@
+footer {
+    background-image: radial-gradient(at top, $light -180%, $blue 50%, $dark 160%);
+    color: $light;
+    padding: 2px 6px 40px;
+
+    #footer_heading-main,
+    #footer_heading-sec {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    #footer_heading-main {
+        font-size: 2.7rem;
+    }
+
+    #footer_heading-sec {
+        font-size: 1.2rem;
+        margin-top: -8px;
+    }
+
+    .footer_contact {
+        display: flex;
+        margin: 6px auto;
+        width: fit-content;
+    }
+
+    #phone {
+        height: 22px;
+        width: 14px;
+        background-color: $light;
+        border-radius: 3px;
+        position: relative;
+    }
+      
+      #phone::after {
+        content: '';
+        height: 14px;
+        width: 10px;
+        background-color: $blue;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+    }
+      
+      #phone::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: $blue;
+        border-radius: 50%;
+        bottom: 1px;
+        left: 5.5px;
+    }
+
+    #mail {
+        position: relative;
+        width: 24px;
+        height: 18px;
+        border: 2px solid $light;
+        border-radius: 4px;
+        box-sizing: border-box;
+        align-self: center;
+      }
+      
+      #mail::after,
+      #mail::before,
+      #mail_left,
+      #mail_right {
+        position: absolute;
+        background-color: $light;
+      }
+      
+      #mail::after,
+      #mail::before {
+        content: '';
+        width: 14px;
+        height: 2px;
+      }
+      
+      #mail::after {
+        transform: rotate(40deg) skew(20deg);
+        top: 3.5px;
+        left: -2px;
+      }
+      
+      #mail::before {
+        transform: rotate(-40deg) skew(-20deg);
+        top: 3.5px;
+        right: -2px;
+      }
+      
+      #mail_left {
+        width: 9px;
+        height: 2px;
+        transform: rotate(-40deg);
+        bottom: 3px;
+        left: -1.5px;
+      }
+      
+      #mail_right {
+        width: 9px;
+        height: 2px;
+        transform: rotate(40deg);
+        bottom: 3px;
+        right: -1.5px;
+      }
+
+    p {
+        color: $light;
+        margin: 0 6px;
+    }
+
+    a {
+        color: $light;
+        text-decoration: none;
+    }
+}

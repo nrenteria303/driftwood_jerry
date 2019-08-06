@@ -11,7 +11,7 @@
   
   </head>
   
-  <body>
+  <body onload="homeBlockShow()">
     <header>
       <div id="header-fixed">
         <h2 id="heading_logo">Driftwood Jerry</h2>
@@ -32,14 +32,37 @@
       <div id="nav-hide" onclick="navTransform()"></div>
     </header>
 
-    <div id="banner"></div>
-
     <main>
+      <div id="banner"></div>
+      <div id="home_blocks">
+        <div class="home_block-content hidden">
+          <h2>One of a kind driftwood art, all from found Colorado wood</h2>
+        </div>
+        <div id="home_img-1" class="home_img"></div>
+        <div class="home_block-content hidden">
+          <h2>Add a touch of nature to your home or business with our pieces</h2>
+        </div>
+        <div id="home_img-2" class="home_img"></div>
+        <div class="home_block-content hidden">
+          <h2>Our work brings nature back to life and lets its beauty shine</h2>
+        </div>
+      </div>
 
     </main>
     
     <footer>
-
+      <h2 id="footer_heading-main">Driftwood Jerry</h2>
+      <h3 id="footer_heading-sec">Custom Art for Your Home or Business</h3>
+      <div class="footer_contact">
+        <div id="phone" class="icn"></div><p>(970) 000-0000</p>
+      </div>
+      <div class="footer_contact">
+        <div id="mail" class="icn">
+          <div id="mail_left"></div>
+          <div id="mail_right"></div>
+        </div>
+        <p><a href="mailto:jnich5280@gmail.com">jnich5280@gmail.com</a></p>
+      </div>
     </footer>
   
   <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->

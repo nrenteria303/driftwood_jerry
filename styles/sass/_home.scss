@@ -1,0 +1,74 @@
+#banner {
+    background-image: url(../../imgs/display_main-sm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 0%;
+    width: 100vw;
+    height: 290px;
+    position: relative;
+    top: 70px;
+    border-bottom: 3px solid $dark;
+}
+
+#home_blocks {
+    margin: 120px auto 60px;
+
+    .hidden {
+        opacity: 0;
+        bottom: -150px;
+    }
+
+    .showing {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+.home_block-content {
+    margin: 70px auto;
+    padding: 12px 14px;
+    width: 70vw;
+    position: relative;
+    border: 4px inset $light;
+    box-shadow: 0 0 18px $dark;
+    background-image: linear-gradient(100deg, $light 50%, $blue 240%);
+    transition: all 1s ease;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: linear-gradient(160deg, transparent 50%, $blue 240%);
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 8px;
+    }
+}
+
+.home_img {
+    width: 100vw;
+    height: 90vh;
+    border-top: solid 3px $dark;
+    border-bottom: solid 3px $dark;
+}
+
+#home_img-1 {
+    background-image: url(../../imgs/home_project_1_md.jpg);
+    background-size: cover;
+    background-position: 40% 0;
+}
+
+#home_img-2 {
+    background-image: url(../../imgs/home_img_2_md.jpg);
+    background-size: cover;
+    background-position: 40% 0;
+}
+

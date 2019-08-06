@@ -5,7 +5,7 @@ header {
 
     #header-fixed {
         background-image: radial-gradient(at bottom center, $light 55%, $blue 360%);
-        box-shadow: 0 0px 6px $dark;
+        box-shadow: 0 -5px 20px $dark;
         position: fixed;
         z-index: 100;
         width: 100%;
@@ -15,9 +15,9 @@ header {
     }
 
     #heading_logo {
-        font-family: $font-logo;
-        color: $dark;
-        font-size: 32px;
+        // font-family: $font-logo;
+        color: $green;
+        font-size: 2.2rem;
         margin: 0;
         align-self: center;
     }
@@ -84,7 +84,7 @@ header {
     }
 
     #nav_content {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 200px;
         left: 0;
@@ -97,11 +97,32 @@ header {
         flex-direction: column;
         justify-content: space-around;
         z-index: 10;
-        transition: top .34s ease-in-out;
+        transition: top .34s ease-out;
+    }
+
+    #nav_content::after,
+    #nav_content::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -21px;
+        border-top: 0 solid $dark;
+        border-bottom: 15px solid transparent;
+    }
+
+    #nav_content::after {
+        border-right: 50vw solid $blue;
+        left: 0;
+    }
+
+    #nav_content::before {
+        border-left: 50vw solid $blue;
+        right: 0;
     }
 
     .nav_content-hide {
-        top: -134px;
+        top: -150px;
     }
 
     .nav_content-show {
@@ -134,7 +155,7 @@ header {
     }
 
     #nav-hide {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: calc(100vh - 275px);
         top: 275px;

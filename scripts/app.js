@@ -6,6 +6,8 @@ const burgerBot = document.querySelector("#burger-bottom");
 const navContent = document.querySelector("#nav_content");
 const navHide = document.querySelector("#nav-hide");
 
+const homeBlocks = document.querySelectorAll(".home_block-content");
+
 let navClicked = false;
 
 function navTransform() {
@@ -31,4 +33,11 @@ function navTransform() {
         navHide.style.display = "none";
     }
 	navClicked = !navClicked;
+}
+
+function homeBlockShow() {
+    for (let i = 0; i < homeBlocks.length; i++) {
+        homeBlocks[i].classList.remove("hidden");
+        homeBlocks[i].classList.add("showing");
+    }
 }
