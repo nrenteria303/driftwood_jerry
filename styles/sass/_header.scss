@@ -86,7 +86,7 @@ header {
     #nav_content {
         position: fixed;
         width: 100vw;
-        height: 200px;
+        height: 280px;
         left: 0;
         right: 0;
         background-image: radial-gradient(at top center, $light 55%, $blue 360%);
@@ -122,7 +122,7 @@ header {
     }
 
     .nav_content-hide {
-        top: -150px;
+        top: -228px;
     }
 
     .nav_content-show {
