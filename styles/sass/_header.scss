@@ -12,6 +12,10 @@ header {
         height: 70px;
         display: flex;
         justify-content: space-around;
+
+        @media (min-width: $mq-lg) {
+            height: 90px;
+        }
     }
 
     #heading_logo {
@@ -20,6 +24,9 @@ header {
         font-size: 2.2rem;
         margin: 0;
         align-self: center;
+        @media (min-width: $mq-lg) {
+            font-size: 2.9rem;
+        }
     }
 
     nav {
@@ -31,6 +38,9 @@ header {
         height: 36px;
         position: relative;
         cursor: pointer;
+        @media (min-width: $mq-lg) {
+            display: none;
+        }
     }
     
     #burger-top,
@@ -98,6 +108,24 @@ header {
         justify-content: space-around;
         z-index: 10;
         transition: top .34s ease-out;
+
+        @media (min-width: $mq-lg) {
+            position: fixed;
+            background-image: none;
+            background-color: transparent;
+            top: 0;
+            border: none;
+            box-shadow: none;
+            flex-direction: row;
+            height: fit-content;
+            z-index: 100;
+            width: 480px;
+            margin: 20px 100px 0 auto;
+        }
+        @media (min-width: 1320px) {
+            margin-right: 300px;
+        }
+
     }
 
     #nav_content::after,
@@ -109,6 +137,9 @@ header {
         bottom: -21px;
         border-top: 0 solid $dark;
         border-bottom: 15px solid transparent;
+        @media (min-width: $mq-lg) {
+            display: none;
+        }
     }
 
     #nav_content::after {
@@ -157,8 +188,7 @@ header {
     #nav-hide {
         position: fixed;
         width: 100vw;
-        height: calc(100vh - 275px);
-        top: 275px;
+        height: calc(100vh - 362px);
         bottom: 0;
         right: 0;
         z-index: 10;

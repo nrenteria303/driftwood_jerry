@@ -1,32 +1,46 @@
 #about_main {
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 70px 0 50px;
     background-color: $light;
 
     h1 {
         text-align: center;
         font-size: 2.6rem;
         padding: 0 16px;
-        // line-height: 1.2;
+        line-height: 1.2;
         display: flex;
         flex-direction: column;
         // margin: 50px auto;
+
+        @media (min-width: $mq-md) {
+            font-size: 3.4rem;
+            margin-top: 70px;
+        }
     }
 
     img {
         width: 100vw;
+        max-width: 860px;
+        margin: 0 auto;
+        display: block;
         box-shadow: 0 2px 14px black;
+
+        @media (min-width: $mq-md) {
+            border: inset 5px $light;
+            box-shadow: 0 0 20px 2px black;
+        }
     }
 }
 
 #about_quote {
-    background-image: linear-gradient(to top left, $light -200%, $dark 50%);
-    border-top: $light inset 4px;
-    border-bottom: $light inset 4px;
-    box-shadow: 0 0 15px black;
     padding: 25px;
     text-align: justify;
-    margin: 40px auto 0;
+    margin: 20px auto 0;
+    max-width: 640px;
+
+    @media (min-width: $mq-md) {
+        margin: 40px auto;
+    }
 
     &::after {
         content: '';
@@ -34,19 +48,30 @@
     }
 
     q, p {
-        color: $light;
+        color: $dark;
     }
 
     q {
         font-family: $font-fancy;
         font-size: 1.5rem;
+        font-weight: 700;
     }
 }
 
 #about_story {
     padding: 0 16px;
+    max-width: 700px;
+    margin: 0 auto;
 
     h2 {
         font-size: 2.4rem;
+
+        @media (min-width: $mq-md) {
+            font-size: 2.8rem;
+        }
+    }
+
+    p {
+        line-height: 1.5;
     }
 }
