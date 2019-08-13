@@ -6,9 +6,14 @@ const burgerBot = document.querySelector("#burger-bottom");
 const navContent = document.querySelector("#nav_content");
 const navHide = document.querySelector("#nav-hide");
 
-const homeBlocks = document.querySelectorAll(".home_block-content");
+const homeBlock = document.getElementById("block-content-1");
 
 let navClicked = false;
+
+const leftArrow = document.getElementById("left_arrow");
+const rightArrow = document.getElementById("right_arrow");
+const slideShow = document.getElementById("gallery_slideshow");
+let slidePosition = 0;
 
 function navTransform() {
 	if (!navClicked) {
@@ -36,8 +41,30 @@ function navTransform() {
 }
 
 function homeBlockShow() {
-    for (let i = 0; i < homeBlocks.length; i++) {
-        homeBlocks[i].classList.remove("hidden");
-        homeBlocks[i].classList.add("showing");
-    }
+    homeBlock.classList.remove("hidden");
+    homeBlock.classList.add("showing");
 }
+
+leftArrow.addEventListener("click", function() {
+    if (slidePosition < 0) {
+        slidePosition += 600;
+        slideShow.style.left = slidePosition + 'px';
+        if (slidePosition < 0) {
+            rightArrow.classList.remove("inactive");
+        } else {
+            leftArrow.classList.add("inactive");
+        }
+    }
+});
+
+rightArrow.addEventListener("click", function() {
+    if (slidePosition > -7800) {
+        slidePosition -= 600;
+        slideShow.style.left = slidePosition + 'px';
+        if (slidePosition > -7800) {
+            leftArrow.classList.remove("inactive");
+        } else {
+            rightArrow.classList.add("inactive");
+        }
+    }
+});
