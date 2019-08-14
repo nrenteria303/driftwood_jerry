@@ -15,6 +15,10 @@ const rightArrow = document.getElementById("right_arrow");
 const slideShow = document.getElementById("gallery_slideshow");
 let slidePosition = 0;
 
+const contactP1 = document.getElementById("contact_p-1");
+const contactP2 = document.getElementById("contact_p-2");
+const contactP3 = document.getElementById("contact_p-3");
+
 function navTransform() {
 	if (!navClicked) {
     	burgerMid.classList.remove("burger-middle");
@@ -40,9 +44,9 @@ function navTransform() {
 	navClicked = !navClicked;
 }
 
-function homeBlockShow() {
-    homeBlock.classList.remove("hidden");
-    homeBlock.classList.add("showing");
+function elementShow(element) {
+    element.classList.remove("hidden");
+    element.classList.add("showing");
 }
 
 leftArrow.addEventListener("click", function() {
@@ -68,3 +72,19 @@ rightArrow.addEventListener("click", function() {
         }
     }
 });
+
+function contactP2Show() {
+    contactP2.classList.remove("hidden");
+    contactP2.classList.add("showing");
+}
+
+function contactP3Show() {
+    contactP3.classList.remove("hidden");
+    contactP3.classList.add("showing");
+}
+
+function contactPShowTimeout() {
+    elementShow(contactP1);
+    setTimeout(contactP2Show, 700);
+    setTimeout(contactP3Show, 1500);
+}

@@ -12,6 +12,7 @@ header {
         height: 70px;
         display: flex;
         justify-content: space-around;
+        top: 0;
 
         @media (min-width: $mq-lg) {
             height: 90px;
@@ -114,14 +115,14 @@ header {
             position: fixed;
             background-image: none;
             background-color: transparent;
-            top: 0;
+            top: 20px;
             border: none;
             box-shadow: none;
             flex-direction: row;
-            height: fit-content;
+            height: auto;
             z-index: 100;
             width: 480px;
-            margin: 20px 100px 0 auto;
+            margin: 0 100px 0 auto;
         }
         @media (min-width: 1320px) {
             margin-right: 300px;
@@ -180,7 +181,7 @@ header {
             box-sizing: border-box;
 
             &:hover {
-                text-decoration: underline;
+                text-decoration: line-through;
                 color: $green;
             }
         }

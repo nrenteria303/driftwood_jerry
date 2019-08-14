@@ -1,0 +1,110 @@
+#contact_main {
+    background-color: $light;
+    min-height: calc(100vh - 220px);
+    margin: 72px 0;
+    text-align: center;
+
+    @media (min-width: $mq-md) {
+        margin: 92px auto 80px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        padding-top: 12px;
+
+        @media (min-width: $mq-md) {
+            font-size: 3.6rem;
+        }
+    }
+}
+
+#contact_p-container {
+    width: 100vw;
+    max-width: 700px;
+    height: 380px;
+    background-image: url("../../imgs/contact_wall-art_sm.jpg");
+    background-size: 160%;
+    background-position: 50% 40%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+
+    @media (min-width: $mq-md) {
+        background-image: url("../../imgs/contact_wall-art_lg.jpg");
+        box-shadow: 0 0 16px 2px $dark;
+        height: 460px;
+        background-size: 120%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .7;
+        background-color: $blue;
+        mix-blend-mode: screen;
+    }
+
+    p {
+        color: $light;
+        font-family: $font-fancy;
+        font-size: 2.4rem;
+        font-weight: bold;
+        padding-right: 12px;
+        margin: 20px auto;
+        width: 85%;
+        position: relative;
+        text-shadow: 2px 2px 8px black;;
+        transition: all .8s ease-out;
+
+       //  &:nth-child(2) {
+       //      transition-delay: .12s;
+       //  }
+
+       //  &:nth-child(3) {
+       //     transition-delay: .16s;
+       // }
+
+       @media (min-width: $mq-md) {
+           font-size: 2.6rem;
+       }
+   }
+
+   .hidden {
+       opacity: 0;
+       bottom: -100px;
+   }
+
+   .showing {
+       opacity: 1;
+       bottom: 0;
+   }
+}
+
+#contact-info {
+    margin: 70px auto 0;
+
+    h2 {
+        font-size: 1.8rem;
+
+        @media (min-width: $mq-md) {
+            font-size: 2.2rem;
+        }
+
+        a {
+            font-family: $font-sans;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: line-through;
+            }
+        }
+    }
+}

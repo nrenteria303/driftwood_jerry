@@ -1,8 +1,9 @@
 #gallery_main {
     margin: 70px auto 0;
     background-color: $light;
-    width: 98.5vw;
     overflow-x: hidden;
+    color: $dark;
+    z-index: 10;
 
     h1 {
         text-align: center;
@@ -11,10 +12,11 @@
     }
 
     @media (min-width: $mq-md) {
-        // margin-top: 90px;
+        width: 98vw;
 
         h1 {
             font-size: 4rem;
+            margin-top: 0;
         }
     }
 }
@@ -36,7 +38,7 @@
         border: none;
         position: relative;
         transition: .5s left ease;
-        // left: -500px;
+        width: 8600px;
 
         img {
             height: 540px;
@@ -54,15 +56,24 @@
 }
 
 #arrow_container {
-    display: flex;
-    justify-content: space-between;
-    width: 80vw;
-    margin: -12px auto 0;
-    padding: 0 0 70px;
-    font-size: 5rem;
+    display: none;
 
-    .inactive {
-        color: $light
+    @media (min-width: $mq-md) {
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
+        margin: -12px auto 0;
+        padding: 0 0 70px;
+        font-size: 5rem;
+    
+        .inactive {
+            color: lightgrey;
+            cursor: default;
+            
+            &:hover {
+                transform: none;
+            }
+        }
     }
 }
 

@@ -22,7 +22,9 @@ footer {
     .footer_contact {
         display: flex;
         margin: 6px auto;
+        width: 240px;
         width: fit-content;
+        text-align: center;
     }
 
     #phone {
@@ -115,5 +117,9 @@ footer {
     a {
         color: $light;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: line-through;
+        }
     }
 }
