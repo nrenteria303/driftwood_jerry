@@ -53,8 +53,13 @@
 
     q {
         font-family: $font-fancy;
-        font-size: 1.5rem;
+        font-size: 1.65rem;
         font-weight: 700;
+        line-height: 1.1;
+
+        @media (min-width: $mq-lg) {
+            font-size: 1.85rem;
+        }
     }
 }
 

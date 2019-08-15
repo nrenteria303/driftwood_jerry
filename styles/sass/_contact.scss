@@ -1,11 +1,12 @@
 #contact_main {
     background-color: $light;
-    min-height: calc(100vh - 220px);
+    min-height: calc(100vh - 320px);
     margin: 72px 0;
     text-align: center;
 
     @media (min-width: $mq-md) {
-        margin: 92px auto 80px;
+        margin: 90px auto 0;
+        padding: 60px;
     }
 
     h1 {
