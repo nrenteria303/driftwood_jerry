@@ -181,9 +181,23 @@ header {
             box-sizing: border-box;
 
             &:hover {
-                text-decoration: line-through;
+                // text-decoration: line-through;
                 color: $green;
             }
+        }
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 2.5px;
+            background-color: $green;
+            position: absolute;
+            top: 47%;
+            transition: .2s all ease;
+        }
+
+        &:hover::after {
+            width: 25%;
         }
     }
 
