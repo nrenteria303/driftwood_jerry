@@ -6,6 +6,10 @@ const burgerBot = document.querySelector("#burger-bottom");
 const navContent = document.querySelector("#nav_content");
 const navHide = document.querySelector("#nav-hide");
 
+const header = document.getElementsByTagName("header")[0];
+var c = 0;
+var currentscrollTop = 0;
+
 const homeBlock = document.getElementById("block-content-1");
 
 let navClicked = false;
@@ -47,6 +51,20 @@ function navTransform() {
 function elementShow(element) {
     element.classList.remove("hidden");
     element.classList.add("showing");
+}
+
+window.onscroll = function() {
+    var a = document.documentElement.scrollTop;
+    var b = 40;
+   
+    currentScrollTop = a;
+   
+    if (c < currentScrollTop && a > b + b) {
+      header.classList.add("header-up");
+    } else if (c > currentScrollTop && a > b) {
+      header.classList.remove("header-up");
+    }
+    c = currentScrollTop;  
 }
 
 leftArrow.addEventListener("click", function() {
