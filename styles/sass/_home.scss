@@ -105,7 +105,6 @@
     @media (min-width: $mq-lg) {
         height: 140px;
         height: fit-content;
-        // width: 600px;
         margin: 70px auto 0;
 
         h2 {
@@ -166,7 +165,7 @@
 }
 
 #home_img-1 {
-    background-image: url(../../imgs/home_project_1_md.jpg);
+    background-image: url(../../imgs/home-planter-md.jpg);
     background-size: cover;
     background-position: 40% 0;
 }
@@ -181,3 +180,8 @@
     }
 }
 
+#home_img-3 {
+    background-image: url(../../imgs/candle-holder-md.jpg);
+    background-size: cover;
+    background-position: 40% 0;
+}

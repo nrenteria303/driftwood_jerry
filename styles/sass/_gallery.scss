@@ -23,12 +23,16 @@
 
 #gallery_slideshow {
     border-top: 4px solid $dark;
-    border-bottom: 4px solid $dark;
 
     img {
         width: 100vw;
         margin: 0px auto;
         display: block;
+        border-bottom: 4px solid $dark;
+
+        @media (min-width: $mq-md) {
+            border-bottom: none;
+        }
     }
 
     @media (min-width: $mq-md) {

@@ -63,10 +63,26 @@
     }
 }
 
+#about-window-img {
+    width: 100vw;
+    height: 260px;
+    background-image: url('../../imgs/about-room-showcase.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border-top: 4px solid $dark;
+    border-bottom: 4px solid $dark;
+
+    @media (min-width: $mq-lg) {
+        height: 350px;
+    }
+}
+
 #about_story {
     padding: 0 16px;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
 
     h2 {
         font-size: 2.4rem;
