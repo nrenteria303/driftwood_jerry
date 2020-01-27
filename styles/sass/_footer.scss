@@ -35,36 +35,36 @@ footer {
         position: relative;
     }
       
-      #phone::after {
-        content: '';
-        height: 14px;
-        width: 10px;
-        background-color: $blue;
-        position: absolute;
-        top: 2px;
-        left: 2px;
+    #phone::after {
+      content: '';
+      height: 14px;
+      width: 10px;
+      background-color: $blue;
+      position: absolute;
+      top: 2px;
+      left: 2px;
     }
       
-      #phone::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background-color: $blue;
-        border-radius: 50%;
-        bottom: 1px;
-        left: 5.5px;
+    #phone::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: $blue;
+      border-radius: 50%;
+      bottom: 1px;
+      left: 5.3px;
     }
 
     #mail {
-        position: relative;
-        width: 24px;
-        height: 18px;
-        border: 2px solid $light;
-        border-radius: 4px;
-        box-sizing: border-box;
-        align-self: center;
-      }
+      position: relative;
+      width: 24px;
+      height: 18px;
+      border: 2px solid $light;
+      border-radius: 4px;
+      box-sizing: border-box;
+      align-self: center;
+    }
       
       #mail::after,
       #mail::before,

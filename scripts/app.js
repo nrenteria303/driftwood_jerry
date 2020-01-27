@@ -7,7 +7,7 @@ const navContent = document.querySelector("#nav_content");
 const navHide = document.querySelector("#nav-hide");
 
 const header = document.getElementsByTagName("header")[0];
-var c = 0;
+var downScrollBaseline = 0;
 var currentscrollTop = 0;
 
 const homeBlock = document.getElementById("block-content-1");
@@ -55,16 +55,16 @@ function elementShow(element) {
 
 window.onscroll = function() {
     var a = document.documentElement.scrollTop;
-    var b = 40;
+    var menuHideThreshold = 36;
    
     currentScrollTop = a;
    
-    if (c < currentScrollTop && a > b + b) {
+    if (downScrollBaseline < currentScrollTop && a > 2 * (menuHideThreshold)) {
       header.classList.add("header-up");
-    } else if (c > currentScrollTop && a > b) {
+    } else if (downScrollBaseline > currentScrollTop && a > menuHideThreshold) {
       header.classList.remove("header-up");
     }
-    c = currentScrollTop;  
+    downScrollBaseline = currentScrollTop;  
 }
 
 leftArrow.addEventListener("click", function() {
