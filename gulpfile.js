@@ -33,6 +33,8 @@ gulp.task('watch-fonts', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('build', ['compile-sass'], function() {});
+
 gulp.task('default', ['compile-sass'], function() {
     browserSync.init({
         server: {
