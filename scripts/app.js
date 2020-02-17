@@ -6,46 +6,33 @@ const burgerBot = document.querySelector("#burger-bottom");
 const navContent = document.querySelector("#nav_content");
 const navHide = document.querySelector("#nav-hide");
 
-const header = document.getElementsByTagName("header")[0];
+const header = document.querySelector("header");
 var downScrollBaseline = 0;
 var currentscrollTop = 0;
 
 const homeBlock = document.getElementById("block-content-1");
 
-let navClicked = false;
-
 const leftArrow = document.getElementById("left_arrow");
 const rightArrow = document.getElementById("right_arrow");
 const slideShow = document.getElementById("gallery_slideshow");
-let slidePosition = 0;
+var slidePosition = 0;
+var slideshowWidth = 10000;
+var slideMoveWidth = 560;
 
 const contactP1 = document.getElementById("contact_p-1");
 const contactP2 = document.getElementById("contact_p-2");
 const contactP3 = document.getElementById("contact_p-3");
 
 function navTransform() {
-	if (!navClicked) {
-    	burgerMid.classList.remove("burger-middle");
-    	burgerTop.classList.remove("burger-top");
-        burgerBot.classList.remove("burger-bottom");
-        navContent.classList.remove("nav_content-hide");
-        burgerMid.classList.add("burger-middle-x");
-    	burgerTop.classList.add("burger-top-x");
-        burgerBot.classList.add("burger-bottom-x");
-        navContent.classList.add("nav_content-show");
-        navHide.style.display = "block";
-    } else {
-    	burgerMid.classList.remove("burger-middle-x");
-    	burgerTop.classList.remove("burger-top-x");
-        burgerBot.classList.remove("burger-bottom-x");
-        navContent.classList.remove("nav_content-show");
-        burgerMid.classList.add("burger-middle");
-    	burgerTop.classList.add("burger-top");
-        burgerBot.classList.add("burger-bottom");
-        navContent.classList.add("nav_content-hide");
-        navHide.style.display = "none";
-    }
-	navClicked = !navClicked;
+    burgerMid.classList.toggle("burger-middle");
+    burgerTop.classList.toggle("burger-top");
+    burgerBot.classList.toggle("burger-bottom");
+    navContent.classList.toggle("nav_content-hide");
+    burgerMid.classList.toggle("burger-middle-x");
+    burgerTop.classList.toggle("burger-top-x");
+    burgerBot.classList.toggle("burger-bottom-x");
+    navContent.classList.toggle("nav_content-show");
+    navHide.classList.toggle("display-none");
 }
 
 function elementShow(element) {
@@ -69,7 +56,7 @@ window.onscroll = function() {
 
 leftArrow.addEventListener("click", function() {
     if (slidePosition < 0) {
-        slidePosition += 600;
+        slidePosition += slideMoveWidth;
         slideShow.style.left = slidePosition + 'px';
         if (slidePosition < 0) {
             rightArrow.classList.remove("inactive");
@@ -80,10 +67,10 @@ leftArrow.addEventListener("click", function() {
 });
 
 rightArrow.addEventListener("click", function() {
-    if (slidePosition > -7800) {
-        slidePosition -= 600;
+    if (slidePosition > -slideshowWidth) {
+        slidePosition -= slideMoveWidth;
         slideShow.style.left = slidePosition + 'px';
-        if (slidePosition > -7800) {
+        if (slidePosition > -slideshowWidth) {
             leftArrow.classList.remove("inactive");
         } else {
             rightArrow.classList.add("inactive");

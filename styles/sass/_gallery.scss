@@ -42,7 +42,8 @@
         border: none;
         position: relative;
         transition: .5s left ease;
-        width: 8600px;
+        width: 10000px;
+        width: fit-content;
 
         img {
             height: 540px;
