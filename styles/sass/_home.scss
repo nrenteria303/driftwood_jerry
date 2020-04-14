@@ -21,10 +21,10 @@
     border-top: 3px solid $dark;
     z-index: 10;
     background-color: $light;
-    padding-bottom: 40px;
 
     @media (min-width: $mq-md) {
         margin-top: 455px;
+        padding-bottom: 80px;
     }
 }
 
@@ -33,15 +33,15 @@
 }
 
 .home_block-content {
-    margin: 40px auto;
-    padding: 12px 14px;
-    width: 70vw;
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 100%;
     position: relative;
-    border: 4px inset $light;
-    box-shadow: 0 0 18px $dark;
     background-image: linear-gradient(100deg, $light 50%, $blue 240%);
 
     @media (min-width: $mq-md) {
+        padding: 12px 14px;
+        box-shadow: 0 0 18px $dark;
         margin: 80px auto;
         width: 300px;
         height: fit-content;
@@ -132,14 +132,12 @@
 .blocks-imgs {
     @media (min-width: $mq-md) {
         display: flex;
-        margin-bottom: 80px;
         justify-content: space-around;
     }
 
     @media (min-width: $mq-lg) {
         max-width: 1000px;
         margin: 80px auto 120px;
-        border: inset $light 4px;
         box-shadow: 0 0 20px 2px;
     }
 }

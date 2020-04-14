@@ -26,7 +26,6 @@
         box-shadow: 0 2px 16px black;
 
         @media (min-width: $mq-md) {
-            border: inset 5px $light;
             box-shadow: 0 0 20px 2px black;
         }
     }
