@@ -12,12 +12,13 @@ var currentscrollTop = 0;
 
 const homeBlock = document.getElementById("block-content-1");
 
+var windowWidth = window.innerWidth;
+const galleryImgs = document.querySelectorAll('.gallery-img');
 const leftArrow = document.getElementById("left_arrow");
 const rightArrow = document.getElementById("right_arrow");
 const slideShow = document.getElementById("gallery_slideshow");
 var slidePosition = 0;
-var slideshowWidth = 10000;
-var slideMoveWidth = 560;
+var slideshowWidth = windowWidth * (galleryImgs.length - 1);
 
 const contactP1 = document.getElementById("contact_p-1");
 const contactP2 = document.getElementById("contact_p-2");
@@ -43,9 +44,7 @@ function elementShow(element) {
 window.onscroll = function() {
     var a = document.documentElement.scrollTop;
     var menuHideThreshold = 36;
-   
     currentScrollTop = a;
-   
     if (downScrollBaseline < currentScrollTop && a > 2 * (menuHideThreshold)) {
       header.classList.add("header-up");
     } else if (downScrollBaseline > currentScrollTop && a > menuHideThreshold) {
@@ -56,7 +55,7 @@ window.onscroll = function() {
 
 leftArrow.addEventListener("click", function() {
     if (slidePosition < 0) {
-        slidePosition += slideMoveWidth;
+        slidePosition += windowWidth;
         slideShow.style.left = slidePosition + 'px';
         if (slidePosition < 0) {
             rightArrow.classList.remove("inactive");
@@ -68,7 +67,7 @@ leftArrow.addEventListener("click", function() {
 
 rightArrow.addEventListener("click", function() {
     if (slidePosition > -slideshowWidth) {
-        slidePosition -= slideMoveWidth;
+        slidePosition -= windowWidth;
         slideShow.style.left = slidePosition + 'px';
         if (slidePosition > -slideshowWidth) {
             leftArrow.classList.remove("inactive");

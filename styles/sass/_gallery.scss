@@ -1,5 +1,5 @@
 #gallery_main {
-    margin: 70px auto 0;
+    margin: 70px auto 60px;
     background-color: $light;
     overflow-x: hidden;
     color: $dark;
@@ -9,10 +9,10 @@
         text-align: center;
         font-size: 3rem;
         padding-top: 20px;
+        margin-bottom: 10px;
     }
 
     @media (min-width: $mq-md) {
-        width: 98vw;
 
         h1 {
             font-size: 4rem;
@@ -21,64 +21,27 @@
     }
 }
 
-#gallery_slideshow {
-    border-top: 4px solid $dark;
-
-    img {
-        width: 100vw;
-        margin: 0px auto;
-        display: block;
-        border-bottom: 4px solid $dark;
-
-        @media (min-width: $mq-md) {
-            border-bottom: none;
-        }
-    }
-
-    @media (min-width: $mq-md) {
-        display: flex;
-        overflow-x: visible;
-        margin: 40px 0 0;
-        border: none;
-        position: relative;
-        transition: .5s left ease;
-        width: 10000px;
-        width: fit-content;
-
-        img {
-            height: 540px;
-            margin: 0 40px;
-        }
-
-        .landscape {
-            width: 718px;
-        }
-
-        .portrait {
-            width: 405px;
-        }
-    }
-}
-
 #arrow_container {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: -24px auto 0;
+    font-size: 3rem;
 
-    @media (min-width: $mq-md) {
-        display: flex;
-        justify-content: space-between;
-        width: 80vw;
-        margin: -12px auto 0;
-        padding: 0 0 70px;
-        font-size: 5rem;
-    
-        .inactive {
-            color: lightgrey;
-            cursor: default;
-            
-            &:hover {
-                transform: none;
-            }
+    .inactive {
+        color: #d3d3d3;
+        cursor: default;
+        
+        &:hover {
+            transform: none;
         }
+    }
+
+    @media (min-width: $mq-lg) {
+        position: relative;
+        top: 40vh;
+        font-size: 4rem;
+        z-index: 10;
     }
 }
 
@@ -88,5 +51,55 @@
 
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+#gallery_slideshow {
+    display: flex;
+    overflow-x: visible;
+    position: relative;
+    transition: .5s all ease;
+    width: calc(100vw * 14);
+
+    .gallery-img--container {
+        width: 100vw;
+        min-width: 100vw;
+        display: flex;
+
+        img {
+            width: 95%;
+            margin: auto auto;
+            display: block;
+    
+            &.landscape {
+                height: calc(95vw * 0.75);
+            }
+        }
+    }
+
+    @media (min-width: $mq-sm) {
+
+        .gallery-img--container {
+
+            img {
+                width: 85%;
+                height: 100%;
+    
+                &.landscape {
+                    height: calc(85vw * 0.75);
+                    max-height: 585px;
+                    max-width: 780px;
+                }
+        
+                &.portrait {
+                    max-width: 430px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $mq-md) {
+        transition: .7s all ease;
     }
 }
