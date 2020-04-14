@@ -1,5 +1,5 @@
 #banner {
-    background-image: url(../../imgs/display_main-sm.jpg);
+    background-image: url("../../imgs/display_main-sm.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10% 0%;
@@ -10,7 +10,7 @@
     z-index: -1;
 
     @media (min-width: $mq-md) {
-        background-image: url(../../imgs/display_main-lg.jpg);
+        background-image: url("../../imgs/display_main-lg.jpg");
         background-position: 10% 30%;
         height: 458px;
     }
@@ -98,7 +98,7 @@
 
         h2 {
             font-size: 3rem;
-            text-shadow: -4px 4px 8px $blue;
+            text-shadow: -4px 4px 8px rgba($blue, 0.7);
         }
     }
 

@@ -16,7 +16,7 @@
 
         h1 {
             font-size: 4rem;
-            margin-top: 0;
+            margin: 0 auto;
         }
     }
 }
@@ -101,5 +101,6 @@
 
     @media (min-width: $mq-md) {
         transition: .7s all ease;
+        margin-top: -20px;
     }
 }
