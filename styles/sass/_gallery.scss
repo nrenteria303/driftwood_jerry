@@ -48,9 +48,14 @@
 #left_arrow,
 #right_arrow {
     cursor: pointer;
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.15);
     }
 }
 
