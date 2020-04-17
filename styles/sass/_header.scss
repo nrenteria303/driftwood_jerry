@@ -24,16 +24,20 @@ header {
 
     .logo-link {
         text-decoration: none;
+        align-self: center;
     }
 
     #heading_logo {
         color: $green;
         font-size: 2.2rem;
         margin: 0;
-        align-self: center;
         @media (min-width: $mq-lg) {
             font-size: 2.9rem;
         }
+    }
+
+    #logo-first {
+        font-weight: 600;
     }
 
     nav {
