@@ -10,7 +10,7 @@ const header = document.querySelector("header");
 var downScrollBaseline = 0;
 var currentscrollTop = 0;
 
-const homeBlock = document.getElementById("block-content-1");
+const homeBlock = document.getElementById("block-content-1-text");
 
 var windowWidth = window.innerWidth;
 const galleryImgs = document.querySelectorAll('.gallery-img');
