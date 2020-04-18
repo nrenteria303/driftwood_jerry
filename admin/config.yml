@@ -8,7 +8,7 @@ collections:
     folder: "_posts/gallery-imgs/gallery-imgs.json"
     create: true
     slug: "gallery-{{slug}}"
-    fields: 
+    fields:
       - {
         label: "Title",
         name: "title",
