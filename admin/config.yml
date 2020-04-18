@@ -3,8 +3,8 @@ backend:
   branch: master
 media_folder: "imgs/uploads"
 collections: 
-  - name: "service-slide"
-    label: "Service Slide"
+  - name: "gallery-img"
+    label: "Gallery Image"
     folder: "_posts/gallery-imgs/gallery-imgs.json"
     create: true
     slug: "gallery-{{slug}}"
