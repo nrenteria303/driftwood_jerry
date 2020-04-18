@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: master
 media_folder: "imgs/uploads"
-collections:
-  - name: "gallery-img"
-    label: "Gallery Image"
+collections: 
+  - name: "service-slide"
+    label: "Service Slide"
     folder: "_posts/gallery-imgs/gallery-imgs.json"
     create: true
     slug: "gallery-{{slug}}"
@@ -13,12 +13,12 @@ collections:
         label: "Title",
         name: "title",
         widget: "string"
-      },
+      }
       - {
         label: "Image",
         name: "image",
         widget: "image"
-      },
+      }
       - {
         label: "Alt Text",
         name: "altText",
