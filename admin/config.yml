@@ -5,7 +5,7 @@ media_folder: "imgs/uploads"
 collections: 
   - name: "gallery-img"
     label: "Gallery Image"
-    folder: "_posts/gallery-imgs/gallery-imgs.json"
+    file: "_posts/gallery-imgs/gallery-imgs.json"
     create: true
     slug: "gallery-{{slug}}"
     fields:
