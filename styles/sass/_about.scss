@@ -52,12 +52,12 @@
 
     q {
         font-family: $font-fancy;
-        font-size: 1.65rem;
+        font-size: 1.45rem;
         font-weight: 700;
         line-height: 1.1;
 
         @media (min-width: $mq-lg) {
-            font-size: 1.85rem;
+            font-size: 1.65rem;
         }
     }
 }

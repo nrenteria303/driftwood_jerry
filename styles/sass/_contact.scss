@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
+    overflow: hidden;
 
     @media (min-width: $mq-md) {
         background-image: url("../../imgs/contact_wall-art_lg.jpg");
@@ -58,7 +59,7 @@
     p {
         color: $light;
         font-family: $font-fancy;
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-weight: bold;
         padding-right: 12px;
         margin: 20px auto;
@@ -68,7 +69,7 @@
         transition: all .8s ease-out;
 
        @media (min-width: $mq-md) {
-           font-size: 2.6rem;
+           font-size: 2.35rem;
        }
    }
 
