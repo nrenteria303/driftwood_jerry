@@ -21,15 +21,18 @@
     border-top: 3px solid $dark;
     z-index: 10;
     background-color: $light;
+    padding-bottom: 80px;
 
     @media (min-width: $mq-md) {
         margin-top: 455px;
-        padding-bottom: 50px;
+    }
+    @media (min-width: $mq-lg) {
+        padding-bottom: 1px;
     }
 }
 
 #home_blocks {
-    margin: 0 auto;
+    margin: 0 auto -40px;
 }
 
 .home_block-content {
@@ -37,11 +40,9 @@
     padding: 50px 0;
     width: 100%;
     position: relative;
-    background-image: linear-gradient(100deg, $light 50%, $blue 240%);
 
     @media (min-width: $mq-md) {
         padding: 12px 14px;
-        box-shadow: 0 0 18px $dark;
         margin: 80px auto;
         width: 300px;
         height: fit-content;
@@ -51,24 +52,11 @@
     @media (min-width: $mq-lg) {
         height: 600px;
         width: 600px;
-        margin: 0 auto;
+        margin: 0 -80px;
         padding: 0;
         box-sizing: border-box;
         border: none;
-        box-shadow: none;
         display: flex;
-    }
-
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-image: linear-gradient(160deg, transparent 50%, $blue 240%);
     }
 
     h2 {
@@ -95,6 +83,7 @@
         box-shadow: none;
         background-image: none;
         width: 700px;
+        border-bottom: solid 3px $blue;
 
         h2 {
             font-size: 3rem;
@@ -106,7 +95,6 @@
         height: 140px;
         height: fit-content;
         margin: 84px auto 0;
-        border-bottom: solid 3px $blue;
 
         h2 {
             padding: 0;
@@ -137,55 +125,73 @@
 
 .blocks-imgs {
     @media (min-width: $mq-md) {
-        display: flex;
-        justify-content: space-around;
+        &:nth-child(2) {
+            padding-top: 0;
+        }
+        &:nth-child(3) {
+            background-color: $dark;
+            color: #ffffff;
+            
+            .home-block-outer {
+                flex-direction: row-reverse;
+            }
+        }
+        padding: 64px 0;
     }
 
     @media (min-width: $mq-lg) {
-        max-width: 1000px;
-        margin: 92px auto 120px;
-        box-shadow: 0 0 20px 2px;
+        padding: 100px 0;
+
+        &:nth-child(2) {
+            padding-top: 100px;
+        }
     }
 }
 
-.home_img {
+.home-block-outer {
+    @media (min-width: $mq-md) {
+        display: flex;
+        justify-content: space-around;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $mq-lg) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.home-img-cont {
     width: 100vw;
-    height: 90vh;
-    border-top: solid 3px $dark;
-    border-bottom: solid 3px $dark;
+    height: 133vw;
 
     @media (min-width: $mq-md) {
         width: 320px;
         height: 450px;
-        margin: 0 auto;
-        border: solid 3px $dark;
     }
-
     @media (min-width: $mq-lg) {
-        width: 400px;
+        width: 440px;
         height: 600px;
-        border: none;
     }
 }
 
-#home_img-1 {
-    background-image: url(../../imgs/home-planter-md.jpg);
-    background-size: cover;
-    background-position: 40% 0;
+.home_img {
+    width: 100%;
+    height: 100%;
+    border-top: solid 3px $dark;
+    border-bottom: solid 3px $dark;
+
+    @media (min-width: $mq-md) {
+        margin: 0 auto;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 4px 4px 12px 4px rgba(#000, 0.5);
+    }
 }
 
 #home_img-2 {
-    background-image: url(../../imgs/home_img_2_md.jpg);
-    background-size: cover;
-    background-position: 40% 0;
-
     @media (min-width: $mq-md) {
         order: 2;
     }
-}
-
-#home_img-3 {
-    background-image: url(../../imgs/candle-holder-md.jpg);
-    background-size: cover 100%;
-    background-position: 25% 60%;
 }
