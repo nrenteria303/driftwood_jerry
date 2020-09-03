@@ -69,7 +69,7 @@ let firstBlockScroll = setInterval(() => {
 
 let secondBlockScroll = setInterval(() => {
     if (scrolling) {
-        if (document.documentElement.scrollTop > 1390) {
+        if (document.documentElement.scrollTop > 1360) {
             homeBlock3.classList.add("in-position");
             console.log("Second block visible");
             clearInterval(secondBlockScroll);

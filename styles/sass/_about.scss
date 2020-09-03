@@ -18,9 +18,14 @@
         }
     }
 
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
     img {
         width: 100vw;
-        max-width: 860px;
+        max-width: 520px;
         margin: 0 auto;
         display: block;
         box-shadow: 0 2px 16px black;
@@ -36,25 +41,23 @@
     text-align: justify;
     margin: 20px auto 0;
     max-width: 640px;
+    position: relative;
+    text-shadow: 0 0 4px #000000;
+    z-index: 1;
 
     @media (min-width: $mq-md) {
         margin: 40px auto;
     }
 
-    &::after {
-        content: '';
-
-    }
-
-    q, p {
-        color: $dark;
+    h2, q, p {
+        color: #ffffff;
     }
 
     q {
         font-family: $font-fancy;
-        font-size: 1.45rem;
+        font-size: 1.35rem;
         font-weight: 700;
-        line-height: 1.1;
+        line-height: 1.2;
 
         @media (min-width: $mq-lg) {
             font-size: 1.65rem;
@@ -64,23 +67,35 @@
 
 #about-window-img {
     width: 100vw;
-    height: 260px;
     background-image: url('../../imgs/about-room-showcase.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     box-shadow: 0 2px 16px black;
+    position: relative;
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $dark;
+        opacity: 0.35;
+    }
 
     @media (min-width: $mq-lg) {
-        height: 350px;
+        // height: 350px;
         box-shadow: 0 0 16px black inset;
     }
 }
 
 #about_story {
-    padding: 0 16px;
-    max-width: 700px;
+    max-width: 980px;
     margin: 0 auto 80px;
 
     h2 {
@@ -93,5 +108,41 @@
 
     p {
         line-height: 1.5;
+        padding: 0 16px;
+    }
+
+    .img-float-left {
+        width: 100vw;
+        max-width: 540px;
+        margin: 0 auto;
+
+        @media (min-width: $mq-md) {
+            float: left;
+            margin: 0 30px 10px 0;
+        }
+    }
+}
+
+.process-cont {
+    max-width: 980px;
+    margin: 0 auto 30px;
+
+    h2 {
+        margin: 50px auto 20px;
+
+        @media (min-width: $mq-lg) {
+            margin: 50px auto;
+        }
+    }
+}
+
+.process-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    .process-text {
+        padding: 0 10px 20px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
