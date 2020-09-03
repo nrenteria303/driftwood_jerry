@@ -9,8 +9,11 @@ const navHide = document.querySelector("#nav-hide");
 const header = document.querySelector("header");
 var downScrollBaseline = 0;
 var currentscrollTop = 0;
+let scrolling = false;
 
-const homeBlock = document.getElementById("block-content-1-text");
+const homeBlockText = document.getElementById("block-content-1-text");
+
+const [homeBlock1, homeBlock2, homeBlock3, homeBlock4] = document.querySelectorAll(".home_block-content");
 
 var windowWidth = window.innerWidth;
 const galleryImgs = document.querySelectorAll('.gallery-img');
@@ -42,6 +45,7 @@ function elementShow(element) {
 }
 
 window.onscroll = function() {
+    scrolling = true;
     var a = document.documentElement.scrollTop;
     var menuHideThreshold = 36;
     currentScrollTop = a;
@@ -52,6 +56,36 @@ window.onscroll = function() {
     }
     downScrollBaseline = currentScrollTop;  
 }
+
+let firstBlockScroll = setInterval(() => {
+    if (scrolling) {
+        if (document.documentElement.scrollTop > 560) {
+            homeBlock2.classList.add("in-position");
+            console.log("First block visible");
+            clearInterval(firstBlockScroll);
+        }
+    }
+} , 200);
+
+let secondBlockScroll = setInterval(() => {
+    if (scrolling) {
+        if (document.documentElement.scrollTop > 1390) {
+            homeBlock3.classList.add("in-position");
+            console.log("Second block visible");
+            clearInterval(secondBlockScroll);
+        }
+    }
+} , 200);
+
+let thirdBlockScroll = setInterval(() => {
+    if (scrolling) {
+        if (document.documentElement.scrollTop > 2210) {
+            homeBlock4.classList.add("in-position");
+            console.log("Third block visible");
+            clearInterval(thirdBlockScroll);
+        }
+    }
+} , 200);
 
 leftArrow.addEventListener("click", function() {
     if (slidePosition < 0) {
