@@ -65,7 +65,7 @@ let firstBlockScroll = setInterval(() => {
             clearInterval(firstBlockScroll);
         }
     }
-} , 200);
+} , 100);
 
 let secondBlockScroll = setInterval(() => {
     if (scrolling) {
@@ -75,7 +75,7 @@ let secondBlockScroll = setInterval(() => {
             clearInterval(secondBlockScroll);
         }
     }
-} , 200);
+} , 100);
 
 let thirdBlockScroll = setInterval(() => {
     if (scrolling) {
@@ -85,7 +85,7 @@ let thirdBlockScroll = setInterval(() => {
             clearInterval(thirdBlockScroll);
         }
     }
-} , 200);
+} , 100);
 
 leftArrow.addEventListener("click", function() {
     if (slidePosition < 0) {
