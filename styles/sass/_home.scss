@@ -153,15 +153,10 @@
             padding-top: 0;
         }
         &:nth-child(3) {
-            background-color: $green;
-            color: #ffffff;
+            background-color: lighten($blue, 64%);
             
             .home-block-outer {
                 flex-direction: row-reverse;
-
-                a {
-                    color: #ffffff;
-                }
             }
         }
         padding: 64px 0;

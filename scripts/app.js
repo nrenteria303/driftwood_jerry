@@ -59,27 +59,48 @@ window.onscroll = function() {
 
 let firstBlockScroll = setInterval(() => {
     if (scrolling) {
-        if (document.documentElement.scrollTop > 560) {
-            homeBlock2.classList.add("in-position");
-            clearInterval(firstBlockScroll);
+        if (windowWidth > 700) {
+            if (document.documentElement.scrollTop > 430) {
+                homeBlock2.classList.add("in-position");
+                clearInterval(firstBlockScroll);
+            }
+        } else {
+            if (document.documentElement.scrollTop > 560) {
+                homeBlock2.classList.add("in-position");
+                clearInterval(firstBlockScroll);
+            }
         }
     }
 } , 100);
 
 let secondBlockScroll = setInterval(() => {
     if (scrolling) {
-        if (document.documentElement.scrollTop > 1360) {
-            homeBlock3.classList.add("in-position");
-            clearInterval(secondBlockScroll);
+        if (windowWidth > 700) {
+            if (document.documentElement.scrollTop > 1250) {
+                homeBlock3.classList.add("in-position");
+                clearInterval(secondBlockScroll);
+            }
+        } else {
+            if (document.documentElement.scrollTop > 1380) {
+                homeBlock3.classList.add("in-position");
+                clearInterval(secondBlockScroll);
+            }
         }
     }
 } , 100);
 
 let thirdBlockScroll = setInterval(() => {
     if (scrolling) {
-        if (document.documentElement.scrollTop > 2210) {
-            homeBlock4.classList.add("in-position");
-            clearInterval(thirdBlockScroll);
+        if (windowWidth > 700) {
+            if (document.documentElement.scrollTop > 2110) {
+                homeBlock4.classList.add("in-position");
+                clearInterval(thirdBlockScroll);
+            }
+        } else {
+            if (document.documentElement.scrollTop > 2260) {
+                homeBlock4.classList.add("in-position");
+                clearInterval(thirdBlockScroll);
+            }
         }
     }
 } , 100);

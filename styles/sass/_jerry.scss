@@ -3,25 +3,50 @@ aside {
 }
 
 #meet-jerry {
-    background-color: lighten($blue, 64%);
+    background-image: url('../../imgs/mtn-sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 94vw;
     max-width: 700px;
     margin: 20px auto 0;
     border-radius: 20px;
     padding: 10px 10px 24px;
     box-sizing: border-box;
+    color: $light;
+    text-shadow: 0 0 4px #000000;;
+    position: relative;
+
+    @media (min-width: $mq-md) {
+        background-position: 0% 50%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        border-radius: 20px;
+        right: 0;
+        left: 0;
+        background-color: $green;
+        opacity: 0.7;
+    }
 
     h3 {
         text-align: center;
         font-size: 1.925rem;
         margin: 15px auto;
         text-decoration: underline;
+        position: relative;
     }
 
     img {
         border-radius: 50%;
-        border: solid 4px $blue;
+        border: solid 4px $light;
         margin: 0 auto;
+        position: relative;
         display: block;
     }
 
@@ -35,22 +60,47 @@ aside {
     .meet-jerry-text {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        position: relative;
 
-        p {
+        &-top {
+            display: flex;
+            justify-content: center;
+
+            p:first-child {
+                border-right: solid 2px $light;
+            }
+        }
+
+        &-bottom, &-top p {
             font-size: 1.125rem;
             text-align: center;
             padding: 8px 16px;
+            color: $light;
 
             &::before {
                 content: "≫ ";
             }
 
-            &:first-child {
-                border-right: solid 2px $dark;
-            }
-
             a {
                 text-decoration: none;
+                color: $light;
+            }
+        }
+
+        &-bottom {
+            margin: 0;
+            position: relative;
+            top: -16px;
+
+            &::after {
+                content: '';
+                height: 1%;
+                width: 13%;
+                border-top: solid 2px $light;
+                position: absolute;
+                left: 43.3%;
+                top: -2px;
             }
         }
     }
