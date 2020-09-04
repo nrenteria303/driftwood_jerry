@@ -61,7 +61,6 @@ let firstBlockScroll = setInterval(() => {
     if (scrolling) {
         if (document.documentElement.scrollTop > 560) {
             homeBlock2.classList.add("in-position");
-            console.log("First block visible");
             clearInterval(firstBlockScroll);
         }
     }
@@ -71,7 +70,6 @@ let secondBlockScroll = setInterval(() => {
     if (scrolling) {
         if (document.documentElement.scrollTop > 1360) {
             homeBlock3.classList.add("in-position");
-            console.log("Second block visible");
             clearInterval(secondBlockScroll);
         }
     }
@@ -81,7 +79,6 @@ let thirdBlockScroll = setInterval(() => {
     if (scrolling) {
         if (document.documentElement.scrollTop > 2210) {
             homeBlock4.classList.add("in-position");
-            console.log("Third block visible");
             clearInterval(thirdBlockScroll);
         }
     }
